@@ -60,29 +60,7 @@ function Process1() {
 
     }
 
-    // useEffect(() => {
-    //   async function fetchStudent() {
-    //     if (contacts) {
-    //       contacts.map((receiver) => {
-    //         const id = receiver._id;
-    //         const res = axios.get(studentGetAll,{params:{id:id}});
-    //         res.then((data) => {  
-    //           console.log(data);
-    //           const d1 = data.data.students;
-    //           d1["receiver"] = receiver._id;
-    //           d1["sender"] = receiver.sender;
-    //           setStudent(prev => [...prev, d1]);
-    //         }
-    //         )
-    //         return(
-    //           <div></div>
-    //         )
-    //       })
-    //     }
-    //   }
-    //   fetchStudent();
-    //   //onClick={() => {navigate("/staff/accept", {state: {id: item.receiver, sender: item.sender, message: item.message}})}}
-    // }, [contacts]);
+    
     return (
       <div>
         <div className="container" style={{backgroundColor:"#ffffff", padding: "50px"}}>        
@@ -139,5 +117,6 @@ const styles = {
     textDecoration: "none",
     borderRadius: "5px",
     border: "black",
+    cursor: "pointer",
   },
 }

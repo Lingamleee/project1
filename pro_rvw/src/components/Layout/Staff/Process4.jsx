@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Process4 extends Component {
-  render() {
-    return (
-      <div>Process4</div>
-    )
-  }
+function Process4() {
+  return (
+    <div>Process4</div>
+  )
 }
 
 export default Process4

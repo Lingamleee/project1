@@ -11,6 +11,9 @@ import Staff from '../Layout/Staff'
 import ExcelToJson from '../AdminComponent/ExcelToJson'
 import PcCommunicate from '../CommunicateComponent/PcCommunicate'
 import ExcelSf from '../AdminComponent/ExcelSf'
+import Process from '../Layout/Admin/Process'
+import MyGuide from '../Personal/MyGuide'
+import MyStudent from '../Personal/MyStudent'
 
 class PcMenu extends Component {
   render() {
@@ -27,9 +30,12 @@ class PcMenu extends Component {
               <Route path='*' element={<h1>Not Found</h1>}/>
               <Route path='/Student' Component={Student}/>
               <Route path='/Staff' Component={Staff} />
+              <Route path='/Current' Component={Process} />            
               <Route path='/RegisterStudents' Component={ExcelToJson} />
               <Route path='/RegisterStaffs' Component={ExcelSf} />
               <Route path='/Communicate'  Component={PcCommunicate}/>
+              <Route path='/MyGuide'  Component={MyGuide}/>
+              <Route path='/MyStudent'  Component={MyStudent}/>
             </Routes>
           </div>
           <PcFooter/>

@@ -4,18 +4,6 @@ import store from '../../store'
 import { setCurrentAccesor, setCurrentUser } from '../../actions'
 class StaffNav extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isDropdownOpen: false,
-    };
-  }
-
-  toggleDropdown = () => {
-    this.setState((prevState) => ({
-      isDropdownOpen: !prevState.isDropdownOpen,
-    }));
-  };
 
   handleLogout = () => {
     console.log('logout');    
@@ -30,17 +18,10 @@ class StaffNav extends Component {
           <button style={styles.button}>Home</button>
         </Link>
         <button style={styles.button} onClick={() => window.open("https://www.annauniv.edu/DIST/faculties.html",'_blank')}>Faculties</button>  
-        <button style={styles.button} onClick={this.toggleDropdown}>Previous Student</button>
-        {this.state.isDropdownOpen && (
-          <div className="dropdown-content" style={styles.dropbtn}>
-            <Link to='/PreviousStudent' onClick={this.toggleDropdown}>
-              <button style={styles.button}>PhD</button>
-            </Link>
-            <Link to='/Previous'>
-              <button style={styles.button} onClick={this.toggleDropdown}>M.S</button>
-            </Link>
-          </div>
-        )}
+        
+        <Link to='/MyStudent'>
+          <button style={styles.button}>My Students</button>        
+        </Link>  
         <Link to='/Communicate'>
           <button style={styles.button}>Communicate</button>        
         </Link>  

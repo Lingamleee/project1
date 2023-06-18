@@ -16,7 +16,9 @@ class AdminNav extends Component {
         <Link to='/Admin'>
           <button style={styles.button}>Home</button>
         </Link>
-        <button style={styles.button} onClick={() => window.open("https://www.annauniv.edu/DIST/faculties.html",'_blank')}>Faculties</button>       
+        <Link to='/Current'>
+          <button style={styles.button}>Current</button>        
+        </Link>    
         <Link to='/RegisterStaffs'>
           <button style={styles.button}>RegisterStaffs</button>        
         </Link>   

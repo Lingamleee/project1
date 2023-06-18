@@ -50,7 +50,8 @@ module.exports.addRequest = async (req, res, next) => {
     try {
         const { sender, receiver, message, title } = req.body;
         //update message and title in user
-        const user = await User.findByIdAndUpdate(sender, { $set: { message }, $set: { title }});
+        const user = await User.findByIdAndUpdate(sender, { $set: { message }});
+        await User.findByIdAndUpdate(sender, { $set: { title }});
         //send mail to the receiver
         const subject = "Request for the appointment";
         const text = `You have a request from ${user.name} for the appointment. Please check your dashboard.`;

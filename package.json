@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dayjs": "^1.11.8",
+    "jszip": "^3.10.1"
+  }
+}

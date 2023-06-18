@@ -38,3 +38,10 @@ export const acceptRequestRoute = `${host}/api/request/acceptreq`;
 
 export const setOnGoingRoute = `${host}/api/request/setongoing`;
 export const getOnGoingRoute = `${host}/api/request/getongoing`;
+
+//PPT
+export const addPptRoute = `${host}/api/addppt`;
+export const getPptRoute = `${host}/api/request/getppt`;
+export const getAllPptRoute = `${host}/api/request/getallppt`;
+export const deletePptRoute = `${host}/api/request/deleteppt`;
+

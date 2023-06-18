@@ -34,8 +34,12 @@ export default function Chat() {
         const data = await axios.get(getAdmins,{params:{id:currentUser._id}});
         console.log(data.data,"data.data");
         setContacts(data.data.users);
+        if(currentUser.type !== "Staff"){
         setContacts((prev) => [...prev, ...data.data.staffs]);
+        }
+        if(currentUser.type !== "Student"){
         setContacts((prev) => [...prev, ...data.data.students]);
+        }
       }
     }
     fetchContacts();

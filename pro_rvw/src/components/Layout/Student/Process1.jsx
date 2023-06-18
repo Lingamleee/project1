@@ -117,16 +117,16 @@ function Process1() {
                 <td>{result.regno}</td>
                 <td>{result.name}</td>
                 <td>{result.position}</td>
-                <td>2</td>
+                <td>{result.availability}</td>
                 <td><input onChange={handleChange}/></td>
                 <td>
                   <input type="file" id="myFile" name="filename" onChange={handleFileChange}/>
                   
                   <ButtonsContainer>
-                    <ButtonStyle onClick={handlecli} disabled={!guide}>
+                    <ButtonStyle onClick={handlecli} disabled={guide || result.availability===0}>
                       Upload 
                     </ButtonStyle>
-                    <ButtonStyle onClick={() => handleClick(result._id)} disabled={!guide}>
+                    <ButtonStyle onClick={() => handleClick(result._id)} disabled={guide ||result.availability===0}>
                       Request
                     </ButtonStyle>      
                   </ButtonsContainer>

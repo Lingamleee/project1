@@ -8,7 +8,9 @@ function PcLogin() {
      
     useEffect(() => {
       if(localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)){
-        navigate('/dashboard');
+        const user = localStorage.getItem('user');
+        console.log(user,"user");
+        navigate('/'+user);
       }
     }, [])
 

@@ -29,30 +29,19 @@ class StudentNav extends Component {
         <Link to='/Student'>
           <button style={styles.button}>Home</button>
         </Link>
-        <button style={styles.button} onClick={() => window.open("https://www.annauniv.edu/DIST/faculties.html",'_blank')}>Faculties</button>
-        <Link to ='/Research'>
-          <button style={styles.button}>Research</button>
-        </Link>
-        <Link to='/Publications'>
-          <button style={styles.button}>Publications</button>
-        </Link>        
-        <button style={styles.button} onClick={this.toggleDropdown}>PreviousStudent</button>
-        {this.state.isDropdownOpen && (
-          <div className="dropdown-content" style={styles.dropbtn}>
-            <Link to='/PreviousStudent' onClick={this.toggleDropdown}>
-              <button style={styles.button}>PhD</button>
-            </Link>
-            <Link to='/Previous'>
-              <button style={styles.button} onClick={this.toggleDropdown}>M.S</button>
-            </Link>
-          </div>
-        )}
-        <Link to='/Contact'>
-          <button style={styles.button}>Contact</button>        
-        </Link>  
+        <button style={styles.button} onClick={() => window.open("https://www.annauniv.edu/DIST/faculties.html",'_blank')}>Faculties</button>    
+        <Link to='/MyGuide'>
+          <button style={styles.button}>My Guide</button>        
+        </Link> 
         <Link to='/Communicate'>
           <button style={styles.button}>Communicate</button>        
         </Link>   
+        <Link to ='/Research'>
+          <button style={styles.button}>Research</button>
+        </Link>  
+        <Link to='/Contact'>
+          <button style={styles.button}>Contact</button>        
+        </Link>  
         <Link to='/' onClick={this.handleLogout}>
           <button style={styles.button}>Logout</button>
         </Link>

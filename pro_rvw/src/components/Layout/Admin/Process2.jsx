@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Process2 extends Component {
-  render() {
-    return (
-      <div>Process2</div>
-    )
-  }
+function Process2() {
+  return (
+    <div>Process2</div>
+  )
 }
 
 export default Process2
