@@ -16,6 +16,7 @@ const{
     stsetAvatar,
     stgetStudent,
     stlogOut,
+    stgetAllStudents
 } = require("../controller/studentController");
 
 //Staff Routes
@@ -45,7 +46,7 @@ router.post("/stregister", stregister);
 router.post("/stmultiregister", stmultiregister);
 router.get("/getstudent", stgetStudent);
 router.get("/getstudents", stgetAllUsers);
-
+router.get("/getallstudents", stgetAllStudents);
 router.post("/setavatar/:id", stsetAvatar);
 router.get("/logout/:id", stlogOut);
 

@@ -1,5 +1,5 @@
 //host
-export const host = "http://localhost:5000";
+export const host = "http://localhost:5000"; 
 
 
 
@@ -14,6 +14,7 @@ export const studentRegister = `${host}/api/auth/stregister`;
 export const studentLogout = `${host}/api/auth/stlogout`;
 export const studentMultiRegister = `${host}/api/auth/stmultiregister`;
 export const studentGetAll = `${host}/api/auth/getstudent`;
+export const allStudents = `${host}/api/auth/getallstudents`;
 
 //Staff
 export const staffLogin = `${host}/api/auth/sflogin`;
@@ -35,6 +36,7 @@ export const recieveMessageRoute = `${host}/api/messages/getmsg`;
 export const sendRequestRoute = `${host}/api/request/addreq`;
 export const recieveRequestRoute = `${host}/api/request/getreq`;
 export const acceptRequestRoute = `${host}/api/request/acceptreq`;
+export const getAcceptedRoute = `${host}/api/request/getaccepted`;
 
 export const setOnGoingRoute = `${host}/api/request/setongoing`;
 export const getOnGoingRoute = `${host}/api/request/getongoing`;
@@ -44,4 +46,15 @@ export const addPptRoute = `${host}/api/addppt`;
 export const getPptRoute = `${host}/api/request/getppt`;
 export const getAllPptRoute = `${host}/api/request/getallppt`;
 export const deletePptRoute = `${host}/api/request/deleteppt`;
+
+//time slot
+export const addTimeSlotRoute = `${host}/api/request/addtime`;
+export const deleteTimeSlotRoute = `${host}/api/request/deletetime`;
+export const getTimeSlotRoute = `${host}/api/request/gettime`;
+export const getAllTimeSlotRoute = `${host}/api/request/getalltime`;
+export const setTimeSlotRoute = `${host}/api/request/settime`;
+export const setFreeRoute = `${host}/api/request/setfree`;
+export const getFreeRoute = `${host}/api/request/getfree`;
+export const createDateRoute = `${host}/api/request/createdate`;
+
 

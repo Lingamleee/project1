@@ -18,6 +18,9 @@ class AdminNav extends Component {
         </Link>
         <Link to='/Current'>
           <button style={styles.button}>Current</button>        
+        </Link>  
+        <Link to='/time'>
+          <button style={styles.button}>TimeSlot</button>        
         </Link>    
         <Link to='/RegisterStaffs'>
           <button style={styles.button}>RegisterStaffs</button>        

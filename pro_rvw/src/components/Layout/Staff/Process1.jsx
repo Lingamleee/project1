@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router';
-import { acceptRequestRoute, getAdmins, recieveRequestRoute, staffGetAvail} from '../../../routes/APIRoutes';
+import { acceptRequestRoute, recieveRequestRoute, staffGetAvail} from '../../../routes/APIRoutes';
 
 
 function Process1() {
@@ -9,7 +9,6 @@ function Process1() {
   const [contacts, setContacts] = useState([]);
   const [currentUser, setCurrentUser] = useState([]);
   const [availabilities, setAvailabilities] = useState([]);
-  const [student, setStudent] = useState([]);
 
   
     useEffect(() => {

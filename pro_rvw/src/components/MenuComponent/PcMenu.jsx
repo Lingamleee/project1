@@ -14,6 +14,7 @@ import ExcelSf from '../AdminComponent/ExcelSf'
 import Process from '../Layout/Admin/Process'
 import MyGuide from '../Personal/MyGuide'
 import MyStudent from '../Personal/MyStudent'
+import TimeSlot from '../Layout/Admin/TimeSlot'
 
 class PcMenu extends Component {
   render() {
@@ -36,6 +37,7 @@ class PcMenu extends Component {
               <Route path='/Communicate'  Component={PcCommunicate}/>
               <Route path='/MyGuide'  Component={MyGuide}/>
               <Route path='/MyStudent'  Component={MyStudent}/>
+              <Route path='/time'  Component={TimeSlot}/>
             </Routes>
           </div>
           <PcFooter/>

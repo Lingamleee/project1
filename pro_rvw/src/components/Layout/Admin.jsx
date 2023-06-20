@@ -170,6 +170,7 @@ const Admin = () => {
   const handleSubmit = async () => {
     axios.post(setOnGoingRoute, {progress: activeStep }); 
     setStatus(activeStep);
+    window.location.reload();
     //update the status every users reflect the change
   }
   

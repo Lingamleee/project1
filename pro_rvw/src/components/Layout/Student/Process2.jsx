@@ -1,10 +1,7 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios';
-import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
-import { addPptRoute, deletePptRoute, getAllPptRoute, getPptRoute } from '../../../routes/APIRoutes';
-import Process3 from './Process3';
+import { addPptRoute, deletePptRoute, getPptRoute } from '../../../routes/APIRoutes';
 
 function Process2 () {
   const [file, setFile] = useState(undefined);
@@ -92,44 +89,43 @@ function Process2 () {
 
 
     
-    const handleDownloadAll = async () => {
-      try {
-        const response = await axios.get(getAllPptRoute, {
-          responseType: 'arraybuffer',
-        });
-        const zipData = response.data;
-        console.log(zipData);
+    // const handleDownloadAll = async () => {
+    //   try {
+    //     const response = await axios.get(getAllPptRoute, {
+    //       responseType: 'arraybuffer',
+    //     });
+    //     const zipData = response.data;
+    //     console.log(zipData);
     
-        //Create a new JSZip instance
-        const zip = new JSZip();    
+    //     //Create a new JSZip instance
+    //     const zip = new JSZip();    
 
 
-        await zip.loadAsync(zipData);
+    //     await zip.loadAsync(zipData);
 
-        // Generate a unique filename for the ZIP file
-        const timestamp = Date.now();
-        const zipFilename = `files_${timestamp}.zip`;
-        zip.generateAsync({ type: 'blob' }).then((content) => {
-          // Create a temporary <a> element to trigger the file download
-          const element = document.createElement('a');
-          element.href = URL.createObjectURL(content);
-          element.download = zipFilename;
-          document.body.appendChild(element);
-          element.click();
-          document.body.removeChild(element);
-        });
+    //     // Generate a unique filename for the ZIP file
+    //     const timestamp = Date.now();
+    //     const zipFilename = `files_${timestamp}.zip`;
+    //     zip.generateAsync({ type: 'blob' }).then((content) => {
+    //       // Create a temporary <a> element to trigger the file download
+    //       const element = document.createElement('a');
+    //       element.href = URL.createObjectURL(content);
+    //       element.download = zipFilename;
+    //       document.body.appendChild(element);
+    //       element.click();
+    //       document.body.removeChild(element);
+    //     });
 
 
-      } catch (error) {
-        console.log(error);
-        // Handle errors
-      }
-    }
+    //   } catch (error) {
+    //     console.log(error);
+    //     // Handle errors
+    //   }
+    // }
   
 
     return (
       <div>
-        <Process3/>
         <div className="container" style={{backgroundColor:"#ffffff", padding: "50px"}}> 
           <div className="row">
             <div className="col-md-12">

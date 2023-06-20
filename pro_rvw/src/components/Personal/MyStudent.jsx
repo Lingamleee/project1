@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { getPptRoute, studentGetAll } from '../../routes/APIRoutes';
+import { studentGetAll } from '../../routes/APIRoutes';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
@@ -45,6 +45,8 @@ export default function MyStudent() {
             setStudents(prev => [...prev, student]);
           } 
           getStudentRoute(item);
+
+          return null;
           
         })
       }
@@ -74,13 +76,17 @@ export default function MyStudent() {
                 {students.map((item) => {
                   return(
                     <tr key={item._id}>
-                      <td scope="row">{item.regno}</td>
+                      <td>{item.regno}</td>
                       <td>{item.name}</td>
                       <td>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DateTimePicker
+                        <DateTimePicker
                               label="Controlled picker"
-                            />
+                              value={value}
+                              onChange={(newValue) => {
+                                setValue(newValue);
+                              }}
+                        />
                         </LocalizationProvider>
                       </td>
                       <td>

@@ -5,6 +5,8 @@ import { setCurrentAccesor, setCurrentUser } from '../../actions'
 class StaffNav extends Component {
 
 
+
+
   handleLogout = () => {
     console.log('logout');    
     localStorage.clear();
@@ -21,6 +23,9 @@ class StaffNav extends Component {
         
         <Link to='/MyStudent'>
           <button style={styles.button}>My Students</button>        
+        </Link>  
+        <Link to='/time'>
+          <button style={styles.button}>TimeSlot</button>        
         </Link>  
         <Link to='/Communicate'>
           <button style={styles.button}>Communicate</button>        

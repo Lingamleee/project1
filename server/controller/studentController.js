@@ -52,9 +52,6 @@ module.exports.stmultiregister = async (req, res, next) => {
       return transporter.sendMail(mailOptions);
       }
     });    
-
-
-
     Promise.all(mailPromises)
     .then(() => {
       res.status(200).json({ message: 'Emails sent successfully', status: true});
@@ -100,6 +97,7 @@ module.exports.stgetAllUsers = async (req, res, next) => {
       "username",
       "avatarImage",
       "_id",
+      "regno"
     ]);
     return res.json(users);
   } catch (ex) {
@@ -137,3 +135,14 @@ module.exports.stlogOut = (req, res, next) => {
     next(ex);
   }
 };
+
+//get all students
+
+module.exports.stgetAllStudents = async (req, res, next) => {
+  try {
+    const students = await User.find({});
+    return res.json({status: true, students});
+  } catch (ex) {
+    next(ex);
+  }
+}

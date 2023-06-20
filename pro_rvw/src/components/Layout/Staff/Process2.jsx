@@ -1,16 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { getPptRoute, studentGetAll } from '../../../routes/APIRoutes';
-import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import dayjs from 'dayjs';
+import {studentGetAll } from '../../../routes/APIRoutes';
 
 
-export default function MyStudent() {
+export default function Process2() {
 
   const [students, setStudents] = useState([]);
   const [currentUser, setCurrentUser] = useState([]);
-  const [value, setValue] = useState(dayjs('2022-04-17T15:30'));
 
   useEffect(() => {
     const item = JSON.parse(localStorage.getItem('current-user'))
@@ -45,6 +41,7 @@ export default function MyStudent() {
             setStudents(prev => [...prev, student]);
           } 
           getStudentRoute(item);
+          return null;
           
         })
       }
@@ -73,7 +70,7 @@ export default function MyStudent() {
                 {students.map((item) => {
                   return(
                     <tr key={item._id}>
-                      <td scope="row">{item.regno}</td>
+                      <td>{item.regno}</td>
                       <td>{item.name}</td>
                       <td 
                         style={{width:"150px"}}

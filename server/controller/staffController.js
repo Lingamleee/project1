@@ -133,7 +133,7 @@ module.exports.sfgetAvail = async (req, res, next) => {
     if(!id) return res.json({ msg: "User id is required " });
     const data = await User.findById(id);
 
-    return res.json({ msg: "Request added successfully.", avail: data.availability});
+    return res.json({ msg: "Request added successfully.",data: data, avail: data.availability});
 
   } catch (ex) {
     next(ex);

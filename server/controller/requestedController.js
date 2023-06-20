@@ -16,6 +16,15 @@ module.exports.getRequests = async (req, res, next) => {
     }
 }
 
+module.exports.getAccepted = async (req, res, next) => {
+    try {
+        const data = await request.find({}).lean();
+        return res.json({ data });
+    } catch (ex) {
+        next(ex);
+    }
+}
+
 module.exports.acceptRequest = async (req, res, next) => {
     const {staff, student} = req.body;
     //update the accepted array in request

@@ -33,6 +33,9 @@ class StudentNav extends Component {
         <Link to='/MyGuide'>
           <button style={styles.button}>My Guide</button>        
         </Link> 
+        <Link to='/time'>
+          <button style={styles.button}>TimeSlot</button>        
+        </Link>   
         <Link to='/Communicate'>
           <button style={styles.button}>Communicate</button>        
         </Link>   
